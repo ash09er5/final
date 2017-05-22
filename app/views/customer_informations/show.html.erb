@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Customer:</strong>
+  <%= @customer_information.Customer_id %>
+</p>
+
+<p>
+  <strong>Date joined:</strong>
+  <%= @customer_information.Date_Joined %>
+</p>
+
+<p>
+  <strong>Email address:</strong>
+  <%= @customer_information.Email_Address %>
+</p>
+
+<p>
+  <strong>Outstanding charges:</strong>
+  <%= @customer_information.Outstanding_Charges %>
+</p>
+
+<%= link_to 'Edit', edit_customer_information_path(@customer_information) %> |
+<%= link_to 'Back', customer_informations_path %>

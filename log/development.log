@@ -1,0 +1,1059 @@
+  [1m[36m (16.0ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (16.0ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.0ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateMarketplaces (20170522121305)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (2.0ms)[0m  CREATE TABLE "marketplaces" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "Order_id" varchar(255), "Product_Name" varchar(255), "Price" varchar(255), "Customer_id" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170522121305"]]
+  [1m[35m (13.0ms)[0m  commit transaction
+Migrating to CreateCustomerInformations (20170522121910)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (1.0ms)[0m  CREATE TABLE "customer_informations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "Customer_id" varchar(255), "Date_Joined" varchar(255), "Email_Address" varchar(255), "Outstanding_Charges" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170522121910"]]
+  [1m[35m (16.0ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/markertplace" for 127.0.0.1 at 2017-05-22 08:22:30 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ActionController::RoutingError (No route matches [GET] "/markertplace"):
+  actionpack (4.1.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.8) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.8) lib/rails/engine.rb:514:in `call'
+  railties (4.1.8) lib/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  c:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  c:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  c:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_table.html.erb (8.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (33.0ms)
+
+
+Started GET "/markertplaces" for 127.0.0.1 at 2017-05-22 08:22:40 -0400
+
+ActionController::RoutingError (No route matches [GET] "/markertplaces"):
+  actionpack (4.1.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.8) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.8) lib/rails/engine.rb:514:in `call'
+  railties (4.1.8) lib/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  c:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  c:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  c:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (41.0ms)
+
+
+Started GET "/markertplaces" for 127.0.0.1 at 2017-05-22 08:23:12 -0400
+
+ActionController::RoutingError (No route matches [GET] "/markertplaces"):
+  actionpack (4.1.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.8) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.8) lib/rails/engine.rb:514:in `call'
+  railties (4.1.8) lib/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  c:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  c:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  c:/RailsInstaller/Ruby2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (30.0ms)
+
+
+Started GET "/marketplaces" for 127.0.0.1 at 2017-05-22 08:23:41 -0400
+Processing by MarketplacesController#index as HTML
+  [1m[35mMarketplace Load (0.0ms)[0m  SELECT "marketplaces".* FROM "marketplaces"
+  Rendered marketplaces/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 1321ms (Views: 1304.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/customer_informations.css?body=1" for 127.0.0.1 at 2017-05-22 08:23:42 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2017-05-22 08:23:42 -0400
+
+
+Started GET "/assets/marketplaces.css?body=1" for 127.0.0.1 at 2017-05-22 08:23:42 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2017-05-22 08:23:42 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2017-05-22 08:23:42 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2017-05-22 08:23:42 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2017-05-22 08:23:42 -0400
+
+
+Started GET "/assets/customer_informations.js?body=1" for 127.0.0.1 at 2017-05-22 08:23:42 -0400
+
+
+Started GET "/assets/marketplaces.js?body=1" for 127.0.0.1 at 2017-05-22 08:23:42 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2017-05-22 08:23:42 -0400
+
+
+Started GET "/marketplaces/new" for 127.0.0.1 at 2017-05-22 08:23:49 -0400
+Processing by MarketplacesController#new as HTML
+  Rendered marketplaces/_form.html.erb (18.0ms)
+  Rendered marketplaces/new.html.erb within layouts/application (21.0ms)
+Completed 200 OK in 71ms (Views: 69.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/marketplaces" for 127.0.0.1 at 2017-05-22 08:24:23 -0400
+Processing by MarketplacesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+/+RDLexYXtI+JT+EnDcAeA0ROvliQh8zB7tylm6knE=", "marketplace"=>{"Order_id"=>"23549856", "Product_Name"=>"Shoes", "Price"=>"65.99", "Customer_id"=>"12356678"}, "commit"=>"Create Marketplace"}
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (3.0ms)[0m  INSERT INTO "marketplaces" ("Customer_id", "Order_id", "Price", "Product_Name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["Customer_id", "12356678"], ["Order_id", "23549856"], ["Price", "65.99"], ["Product_Name", "Shoes"], ["created_at", "2017-05-22 12:24:23.137786"], ["updated_at", "2017-05-22 12:24:23.137786"]]
+  [1m[36m (15.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/marketplaces/1
+Completed 302 Found in 58ms (ActiveRecord: 19.0ms)
+
+
+Started GET "/marketplaces/1" for 127.0.0.1 at 2017-05-22 08:24:23 -0400
+Processing by MarketplacesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMarketplace Load (0.0ms)[0m  SELECT  "marketplaces".* FROM "marketplaces"  WHERE "marketplaces"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered marketplaces/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 62ms (Views: 59.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/customer_informations.css?body=1" for 127.0.0.1 at 2017-05-22 08:24:23 -0400
+
+
+Started GET "/assets/marketplaces.css?body=1" for 127.0.0.1 at 2017-05-22 08:24:23 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2017-05-22 08:24:23 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2017-05-22 08:24:23 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2017-05-22 08:24:23 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2017-05-22 08:24:23 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2017-05-22 08:24:23 -0400
+
+
+Started GET "/assets/customer_informations.js?body=1" for 127.0.0.1 at 2017-05-22 08:24:23 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2017-05-22 08:24:23 -0400
+
+
+Started GET "/marketplaces" for 127.0.0.1 at 2017-05-22 08:24:25 -0400
+Processing by MarketplacesController#index as HTML
+  [1m[36mMarketplace Load (0.0ms)[0m  [1mSELECT "marketplaces".* FROM "marketplaces"[0m
+  Rendered marketplaces/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 74ms (Views: 73.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-22 08:24:35 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/railties-4.1.8/lib/rails/templates/rails/welcome/index.html.erb (1.0ms)
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/customer_informations" for 127.0.0.1 at 2017-05-22 08:24:52 -0400
+Processing by CustomerInformationsController#index as HTML
+  [1m[35mCustomerInformation Load (0.0ms)[0m  SELECT "customer_informations".* FROM "customer_informations"
+  Rendered customer_informations/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 96ms (Views: 92.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/customer_informations.css?body=1" for 127.0.0.1 at 2017-05-22 08:24:52 -0400
+
+
+Started GET "/assets/marketplaces.css?body=1" for 127.0.0.1 at 2017-05-22 08:24:52 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2017-05-22 08:24:52 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2017-05-22 08:24:52 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2017-05-22 08:24:52 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2017-05-22 08:24:52 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2017-05-22 08:24:52 -0400
+
+
+Started GET "/assets/customer_informations.js?body=1" for 127.0.0.1 at 2017-05-22 08:24:52 -0400
+
+
+Started GET "/assets/marketplaces.js?body=1" for 127.0.0.1 at 2017-05-22 08:24:52 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2017-05-22 08:24:52 -0400
+
+
+Started GET "/customer_informations/new" for 127.0.0.1 at 2017-05-22 08:24:54 -0400
+Processing by CustomerInformationsController#new as HTML
+  Rendered customer_informations/_form.html.erb (8.0ms)
+  Rendered customer_informations/new.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 66ms (Views: 64.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/customer_informations" for 127.0.0.1 at 2017-05-22 08:25:06 -0400
+Processing by CustomerInformationsController#index as HTML
+  [1m[36mCustomerInformation Load (1.0ms)[0m  [1mSELECT "customer_informations".* FROM "customer_informations"[0m
+  Rendered customer_informations/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 77ms (Views: 75.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/marketplaces/1" for 127.0.0.1 at 2017-05-22 08:26:00 -0400
+Processing by MarketplacesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMarketplace Load (0.0ms)[0m  SELECT  "marketplaces".* FROM "marketplaces"  WHERE "marketplaces"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered marketplaces/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 98ms (Views: 93.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/marketplaces" for 127.0.0.1 at 2017-05-22 08:26:02 -0400
+Processing by MarketplacesController#index as HTML
+  [1m[36mMarketplace Load (0.0ms)[0m  [1mSELECT "marketplaces".* FROM "marketplaces"[0m
+  Rendered marketplaces/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 61ms (Views: 61.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/customer_informations" for 127.0.0.1 at 2017-05-22 08:26:05 -0400
+Processing by CustomerInformationsController#index as HTML
+  [1m[35mCustomerInformation Load (0.0ms)[0m  SELECT "customer_informations".* FROM "customer_informations"
+  Rendered customer_informations/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 87ms (Views: 86.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/customer_informations.css?body=1" for 127.0.0.1 at 2017-05-22 08:26:05 -0400
+
+
+Started GET "/assets/marketplaces.css?body=1" for 127.0.0.1 at 2017-05-22 08:26:05 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2017-05-22 08:26:05 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2017-05-22 08:26:05 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2017-05-22 08:26:05 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2017-05-22 08:26:05 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2017-05-22 08:26:05 -0400
+
+
+Started GET "/assets/customer_informations.js?body=1" for 127.0.0.1 at 2017-05-22 08:26:05 -0400
+
+
+Started GET "/assets/marketplaces.js?body=1" for 127.0.0.1 at 2017-05-22 08:26:05 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2017-05-22 08:26:05 -0400
+
+
+Started GET "/customer_informations/new" for 127.0.0.1 at 2017-05-22 08:26:08 -0400
+Processing by CustomerInformationsController#new as HTML
+  Rendered customer_informations/_form.html.erb (3.0ms)
+  Rendered customer_informations/new.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 99ms (Views: 98.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/customer_informations" for 127.0.0.1 at 2017-05-22 08:26:26 -0400
+Processing by CustomerInformationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+/+RDLexYXtI+JT+EnDcAeA0ROvliQh8zB7tylm6knE=", "customer_information"=>{"Customer_id"=>"12356678", "Date_Joined"=>"", "Email_Address"=>"", "Outstanding_Charges"=>""}, "commit"=>"Create Customer information"}
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "customer_informations" ("Customer_id", "Date_Joined", "Email_Address", "Outstanding_Charges", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["Customer_id", "12356678"], ["Date_Joined", ""], ["Email_Address", ""], ["Outstanding_Charges", ""], ["created_at", "2017-05-22 12:26:26.328786"], ["updated_at", "2017-05-22 12:26:26.328786"]]
+  [1m[36m (12.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/customer_informations/1
+Completed 302 Found in 21ms (ActiveRecord: 13.0ms)
+
+
+Started GET "/customer_informations/1" for 127.0.0.1 at 2017-05-22 08:26:26 -0400
+Processing by CustomerInformationsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mCustomerInformation Load (1.0ms)[0m  SELECT  "customer_informations".* FROM "customer_informations"  WHERE "customer_informations"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered customer_informations/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 56ms (Views: 54.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/marketplaces.css?body=1" for 127.0.0.1 at 2017-05-22 08:26:26 -0400
+
+
+Started GET "/assets/customer_informations.css?body=1" for 127.0.0.1 at 2017-05-22 08:26:26 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2017-05-22 08:26:26 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2017-05-22 08:26:26 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2017-05-22 08:26:26 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2017-05-22 08:26:26 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2017-05-22 08:26:26 -0400
+
+
+Started GET "/assets/customer_informations.js?body=1" for 127.0.0.1 at 2017-05-22 08:26:26 -0400
+
+
+Started GET "/assets/marketplaces.js?body=1" for 127.0.0.1 at 2017-05-22 08:26:26 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2017-05-22 08:26:26 -0400
+
+
+Started GET "/customer_informations" for 127.0.0.1 at 2017-05-22 08:26:28 -0400
+Processing by CustomerInformationsController#index as HTML
+  [1m[36mCustomerInformation Load (1.0ms)[0m  [1mSELECT "customer_informations".* FROM "customer_informations"[0m
+  Rendered customer_informations/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 94ms (Views: 92.0ms | ActiveRecord: 1.0ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (1.0ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/customer_informations/1" for 127.0.0.1 at 2017-05-22 08:30:26 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by CustomerInformationsController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 12ms
+
+SyntaxError (c:/Sites/storesite2/app/models/customer_information.rb:2: syntax error, unexpected ':', expecting keyword_end
+  has_and_belongs_to_many : :marketplace
+                           ^):
+  app/models/customer_information.rb:2: syntax error, unexpected ':', expecting keyword_end
+  app/controllers/customer_informations_controller.rb:67:in `set_customer_information'
+
+
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (35.0ms)
+
+
+Started GET "/customer_informations/1" for 127.0.0.1 at 2017-05-22 08:36:50 -0400
+Processing by CustomerInformationsController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 6ms
+
+SyntaxError (c:/Sites/storesite2/app/models/customer_information.rb:2: syntax error, unexpected ':', expecting keyword_end
+  has_and_belongs_to_many : :marketplace
+                           ^):
+  app/models/customer_information.rb:2: syntax error, unexpected ':', expecting keyword_end
+  app/controllers/customer_informations_controller.rb:67:in `set_customer_information'
+
+
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (41.0ms)
+
+
+Started GET "/customer_informations/1" for 127.0.0.1 at 2017-05-22 08:36:51 -0400
+Processing by CustomerInformationsController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 4ms
+
+SyntaxError (c:/Sites/storesite2/app/models/customer_information.rb:2: syntax error, unexpected ':', expecting keyword_end
+  has_and_belongs_to_many : :marketplace
+                           ^):
+  app/models/customer_information.rb:2: syntax error, unexpected ':', expecting keyword_end
+  app/controllers/customer_informations_controller.rb:67:in `set_customer_information'
+
+
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (34.0ms)
+
+
+Started GET "/customer_informations/1" for 127.0.0.1 at 2017-05-22 08:36:54 -0400
+Processing by CustomerInformationsController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 4ms
+
+SyntaxError (c:/Sites/storesite2/app/models/customer_information.rb:2: syntax error, unexpected ':', expecting keyword_end
+  has_and_belongs_to_many : :marketplace
+                           ^):
+  app/models/customer_information.rb:2: syntax error, unexpected ':', expecting keyword_end
+  app/controllers/customer_informations_controller.rb:67:in `set_customer_information'
+
+
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (23.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2017-05-22 08:36:58 -0400
+
+
+Started GET "/assets/marketplaces.css?body=1" for 127.0.0.1 at 2017-05-22 08:36:58 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2017-05-22 08:36:58 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2017-05-22 08:36:58 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2017-05-22 08:36:58 -0400
+
+
+Started GET "/assets/customer_informations.css?body=1" for 127.0.0.1 at 2017-05-22 08:36:58 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2017-05-22 08:36:58 -0400
+
+
+Started GET "/assets/customer_informations.js?body=1" for 127.0.0.1 at 2017-05-22 08:36:58 -0400
+
+
+Started GET "/assets/marketplaces.js?body=1" for 127.0.0.1 at 2017-05-22 08:36:58 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2017-05-22 08:36:58 -0400
+
+
+Started GET "/marketplaces/1" for 127.0.0.1 at 2017-05-22 08:37:32 -0400
+Processing by MarketplacesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMarketplace Load (0.0ms)[0m  SELECT  "marketplaces".* FROM "marketplaces"  WHERE "marketplaces"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered marketplaces/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 174ms (Views: 109.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/marketplaces" for 127.0.0.1 at 2017-05-22 08:37:33 -0400
+Processing by MarketplacesController#index as HTML
+  [1m[36mMarketplace Load (0.0ms)[0m  [1mSELECT "marketplaces".* FROM "marketplaces"[0m
+  Rendered marketplaces/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 85ms (Views: 82.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/customer_informations/1" for 127.0.0.1 at 2017-05-22 08:37:35 -0400
+Processing by CustomerInformationsController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 3ms
+
+SyntaxError (c:/Sites/storesite2/app/models/customer_information.rb:2: syntax error, unexpected ':', expecting keyword_end
+  has_and_belongs_to_many : :marketplace
+                           ^):
+  app/models/customer_information.rb:2: syntax error, unexpected ':', expecting keyword_end
+  app/controllers/customer_informations_controller.rb:67:in `set_customer_information'
+
+
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered c:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (23.0ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.0ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/marketplaces" for 127.0.0.1 at 2017-05-22 08:46:47 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MarketplacesController#index as HTML
+  [1m[35mMarketplace Load (0.0ms)[0m  SELECT "marketplaces".* FROM "marketplaces"
+  Rendered marketplaces/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 113ms (Views: 94.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2017-05-22 08:46:47 -0400
+
+
+Started GET "/assets/marketplaces.css?body=1" for 127.0.0.1 at 2017-05-22 08:46:47 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2017-05-22 08:46:47 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2017-05-22 08:46:47 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2017-05-22 08:46:47 -0400
+
+
+Started GET "/assets/customer_informations.css?body=1" for 127.0.0.1 at 2017-05-22 08:46:47 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2017-05-22 08:46:47 -0400
+
+
+Started GET "/assets/marketplaces.js?body=1" for 127.0.0.1 at 2017-05-22 08:46:47 -0400
+
+
+Started GET "/assets/customer_informations.js?body=1" for 127.0.0.1 at 2017-05-22 08:46:47 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2017-05-22 08:46:47 -0400
+
+
+Started GET "/customer_informations/1" for 127.0.0.1 at 2017-05-22 08:46:50 -0400
+Processing by CustomerInformationsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCustomerInformation Load (0.0ms)[0m  [1mSELECT  "customer_informations".* FROM "customer_informations"  WHERE "customer_informations"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered customer_informations/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 91ms (Views: 76.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/customer_informations.css?body=1" for 127.0.0.1 at 2017-05-22 08:46:51 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2017-05-22 08:46:51 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2017-05-22 08:46:51 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2017-05-22 08:46:51 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2017-05-22 08:46:51 -0400
+
+
+Started GET "/assets/marketplaces.css?body=1" for 127.0.0.1 at 2017-05-22 08:46:51 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2017-05-22 08:46:51 -0400
+
+
+Started GET "/assets/customer_informations.js?body=1" for 127.0.0.1 at 2017-05-22 08:46:51 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2017-05-22 08:46:51 -0400
+
+
+Started GET "/assets/marketplaces.js?body=1" for 127.0.0.1 at 2017-05-22 08:46:51 -0400
+
+
+Started GET "/customer_informations" for 127.0.0.1 at 2017-05-22 08:46:53 -0400
+Processing by CustomerInformationsController#index as HTML
+  [1m[35mCustomerInformation Load (0.0ms)[0m  SELECT "customer_informations".* FROM "customer_informations"
+  Rendered customer_informations/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 63ms (Views: 61.0ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/customer_informations/1" for 127.0.0.1 at 2017-05-22 08:46:56 -0400
+Processing by CustomerInformationsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"+/+RDLexYXtI+JT+EnDcAeA0ROvliQh8zB7tylm6knE=", "id"=>"1"}
+  [1m[36mCustomerInformation Load (0.0ms)[0m  [1mSELECT  "customer_informations".* FROM "customer_informations"  WHERE "customer_informations"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mDELETE FROM "customer_informations" WHERE "customer_informations"."id" = ?[0m  [["id", 1]]
+  [1m[35m (20.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/customer_informations
+Completed 302 Found in 33ms (ActiveRecord: 21.0ms)
+
+
+Started GET "/customer_informations" for 127.0.0.1 at 2017-05-22 08:46:56 -0400
+Processing by CustomerInformationsController#index as HTML
+  [1m[36mCustomerInformation Load (0.0ms)[0m  [1mSELECT "customer_informations".* FROM "customer_informations"[0m
+  Rendered customer_informations/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 54ms (Views: 54.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2017-05-22 08:46:56 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2017-05-22 08:46:56 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2017-05-22 08:46:56 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2017-05-22 08:46:56 -0400
+
+
+Started GET "/assets/marketplaces.css?body=1" for 127.0.0.1 at 2017-05-22 08:46:56 -0400
+
+
+Started GET "/assets/customer_informations.css?body=1" for 127.0.0.1 at 2017-05-22 08:46:56 -0400
+
+
+Started GET "/assets/customer_informations.js?body=1" for 127.0.0.1 at 2017-05-22 08:46:56 -0400
+
+
+Started GET "/assets/marketplaces.js?body=1" for 127.0.0.1 at 2017-05-22 08:46:56 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2017-05-22 08:46:56 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2017-05-22 08:46:56 -0400
+
+
+Started GET "/marketplaces" for 127.0.0.1 at 2017-05-22 08:47:00 -0400
+Processing by MarketplacesController#index as HTML
+  [1m[35mMarketplace Load (0.0ms)[0m  SELECT "marketplaces".* FROM "marketplaces"
+  Rendered marketplaces/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 76ms (Views: 76.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/customer_informations.css?body=1" for 127.0.0.1 at 2017-05-22 08:47:01 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2017-05-22 08:47:01 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2017-05-22 08:47:01 -0400
+
+
+Started GET "/assets/marketplaces.css?body=1" for 127.0.0.1 at 2017-05-22 08:47:01 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2017-05-22 08:47:01 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2017-05-22 08:47:01 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2017-05-22 08:47:01 -0400
+
+
+Started GET "/assets/customer_informations.js?body=1" for 127.0.0.1 at 2017-05-22 08:47:01 -0400
+
+
+Started GET "/assets/marketplaces.js?body=1" for 127.0.0.1 at 2017-05-22 08:47:01 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2017-05-22 08:47:01 -0400
+
+
+Started GET "/customer_informations" for 127.0.0.1 at 2017-05-22 08:47:03 -0400
+Processing by CustomerInformationsController#index as HTML
+  [1m[36mCustomerInformation Load (1.0ms)[0m  [1mSELECT "customer_informations".* FROM "customer_informations"[0m
+  Rendered customer_informations/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 121ms (Views: 119.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/customer_informations.css?body=1" for 127.0.0.1 at 2017-05-22 08:47:03 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2017-05-22 08:47:03 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2017-05-22 08:47:03 -0400
+
+
+Started GET "/assets/marketplaces.css?body=1" for 127.0.0.1 at 2017-05-22 08:47:03 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2017-05-22 08:47:03 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2017-05-22 08:47:04 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2017-05-22 08:47:04 -0400
+
+
+Started GET "/assets/customer_informations.js?body=1" for 127.0.0.1 at 2017-05-22 08:47:04 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2017-05-22 08:47:04 -0400
+
+
+Started GET "/assets/marketplaces.js?body=1" for 127.0.0.1 at 2017-05-22 08:47:04 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.0ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/marketplaces" for 127.0.0.1 at 2017-05-22 08:48:45 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MarketplacesController#index as HTML
+  [1m[35mMarketplace Load (0.0ms)[0m  SELECT "marketplaces".* FROM "marketplaces"
+  Rendered marketplaces/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 114ms (Views: 99.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2017-05-22 08:48:45 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2017-05-22 08:48:45 -0400
+
+
+Started GET "/assets/marketplaces.css?body=1" for 127.0.0.1 at 2017-05-22 08:48:45 -0400
+
+
+Started GET "/assets/customer_informations.css?body=1" for 127.0.0.1 at 2017-05-22 08:48:45 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2017-05-22 08:48:45 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2017-05-22 08:48:45 -0400
+
+
+Started GET "/assets/customer_informations.js?body=1" for 127.0.0.1 at 2017-05-22 08:48:45 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2017-05-22 08:48:45 -0400
+
+
+Started GET "/assets/marketplaces.js?body=1" for 127.0.0.1 at 2017-05-22 08:48:45 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2017-05-22 08:48:45 -0400
+
+
+Started GET "/customer_informations" for 127.0.0.1 at 2017-05-22 08:48:47 -0400
+Processing by CustomerInformationsController#index as HTML
+  [1m[36mCustomerInformation Load (0.0ms)[0m  [1mSELECT "customer_informations".* FROM "customer_informations"[0m
+  Rendered customer_informations/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 100ms (Views: 92.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/customer_informations.css?body=1" for 127.0.0.1 at 2017-05-22 08:48:47 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2017-05-22 08:48:47 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2017-05-22 08:48:47 -0400
+
+
+Started GET "/assets/marketplaces.css?body=1" for 127.0.0.1 at 2017-05-22 08:48:47 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2017-05-22 08:48:47 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2017-05-22 08:48:47 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2017-05-22 08:48:47 -0400
+
+
+Started GET "/assets/customer_informations.js?body=1" for 127.0.0.1 at 2017-05-22 08:48:47 -0400
+
+
+Started GET "/assets/marketplaces.js?body=1" for 127.0.0.1 at 2017-05-22 08:48:47 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2017-05-22 08:48:47 -0400
+
+
+Started GET "/marketplaces/new" for 127.0.0.1 at 2017-05-22 08:49:01 -0400
+Processing by MarketplacesController#new as HTML
+  Rendered marketplaces/_form.html.erb (25.0ms)
+  Rendered marketplaces/new.html.erb within layouts/application (34.0ms)
+Completed 200 OK in 86ms (Views: 84.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/marketplaces" for 127.0.0.1 at 2017-05-22 08:49:08 -0400
+Processing by MarketplacesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+/+RDLexYXtI+JT+EnDcAeA0ROvliQh8zB7tylm6knE=", "marketplace"=>{"Order_id"=>"", "Product_Name"=>"", "Price"=>"", "Customer_id"=>"13456443"}, "commit"=>"Create Marketplace"}
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "marketplaces" ("Customer_id", "Order_id", "Price", "Product_Name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["Customer_id", "13456443"], ["Order_id", ""], ["Price", ""], ["Product_Name", ""], ["created_at", "2017-05-22 12:49:08.352685"], ["updated_at", "2017-05-22 12:49:08.352685"]]
+  [1m[35m (13.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/marketplaces/2
+Completed 302 Found in 27ms (ActiveRecord: 14.0ms)
+
+
+Started GET "/marketplaces/2" for 127.0.0.1 at 2017-05-22 08:49:08 -0400
+Processing by MarketplacesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mMarketplace Load (1.0ms)[0m  [1mSELECT  "marketplaces".* FROM "marketplaces"  WHERE "marketplaces"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered marketplaces/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 85ms (Views: 81.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/customer_informations.css?body=1" for 127.0.0.1 at 2017-05-22 08:49:08 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2017-05-22 08:49:08 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2017-05-22 08:49:08 -0400
+
+
+Started GET "/assets/marketplaces.css?body=1" for 127.0.0.1 at 2017-05-22 08:49:08 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2017-05-22 08:49:08 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2017-05-22 08:49:08 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2017-05-22 08:49:08 -0400
+
+
+Started GET "/assets/marketplaces.js?body=1" for 127.0.0.1 at 2017-05-22 08:49:08 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2017-05-22 08:49:08 -0400
+
+
+Started GET "/assets/customer_informations.js?body=1" for 127.0.0.1 at 2017-05-22 08:49:08 -0400
+
+
+Started GET "/marketplaces" for 127.0.0.1 at 2017-05-22 08:49:10 -0400
+Processing by MarketplacesController#index as HTML
+  [1m[35mMarketplace Load (0.0ms)[0m  SELECT "marketplaces".* FROM "marketplaces"
+  Rendered marketplaces/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 103ms (Views: 102.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/customer_informations" for 127.0.0.1 at 2017-05-22 08:49:12 -0400
+Processing by CustomerInformationsController#index as HTML
+  [1m[36mCustomerInformation Load (0.0ms)[0m  [1mSELECT "customer_informations".* FROM "customer_informations"[0m
+  Rendered customer_informations/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 119ms (Views: 117.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/marketplaces.css?body=1" for 127.0.0.1 at 2017-05-22 08:49:12 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2017-05-22 08:49:12 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2017-05-22 08:49:12 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2017-05-22 08:49:12 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2017-05-22 08:49:12 -0400
+
+
+Started GET "/assets/customer_informations.css?body=1" for 127.0.0.1 at 2017-05-22 08:49:12 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2017-05-22 08:49:13 -0400
+
+
+Started GET "/assets/customer_informations.js?body=1" for 127.0.0.1 at 2017-05-22 08:49:13 -0400
+
+
+Started GET "/assets/marketplaces.js?body=1" for 127.0.0.1 at 2017-05-22 08:49:13 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2017-05-22 08:49:13 -0400
+
+
+Started GET "/marketplaces" for 127.0.0.1 at 2017-05-22 08:52:26 -0400
+Processing by MarketplacesController#index as HTML
+  [1m[35mMarketplace Load (0.0ms)[0m  SELECT "marketplaces".* FROM "marketplaces"
+  Rendered marketplaces/index.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 69ms (Views: 64.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/customer_informations.css?body=1" for 127.0.0.1 at 2017-05-22 08:52:26 -0400
+
+
+Started GET "/assets/marketplaces.css?body=1" for 127.0.0.1 at 2017-05-22 08:52:26 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2017-05-22 08:52:26 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2017-05-22 08:52:26 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2017-05-22 08:52:26 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2017-05-22 08:52:26 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2017-05-22 08:52:26 -0400
+
+
+Started GET "/assets/customer_informations.js?body=1" for 127.0.0.1 at 2017-05-22 08:52:26 -0400
+
+
+Started GET "/assets/marketplaces.js?body=1" for 127.0.0.1 at 2017-05-22 08:52:26 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2017-05-22 08:52:26 -0400
+
+
+Started GET "/customer_informations" for 127.0.0.1 at 2017-05-22 08:52:28 -0400
+Processing by CustomerInformationsController#index as HTML
+  [1m[36mCustomerInformation Load (0.0ms)[0m  [1mSELECT "customer_informations".* FROM "customer_informations"[0m
+  Rendered customer_informations/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 82ms (Views: 78.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/marketplaces.css?body=1" for 127.0.0.1 at 2017-05-22 08:52:28 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2017-05-22 08:52:28 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2017-05-22 08:52:28 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2017-05-22 08:52:28 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2017-05-22 08:52:28 -0400
+
+
+Started GET "/assets/customer_informations.css?body=1" for 127.0.0.1 at 2017-05-22 08:52:28 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2017-05-22 08:52:28 -0400
+
+
+Started GET "/assets/customer_informations.js?body=1" for 127.0.0.1 at 2017-05-22 08:52:28 -0400
+
+
+Started GET "/assets/marketplaces.js?body=1" for 127.0.0.1 at 2017-05-22 08:52:28 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2017-05-22 08:52:28 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.0ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/marketplaces" for 127.0.0.1 at 2017-05-22 08:53:28 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MarketplacesController#index as HTML
+  [1m[35mMarketplace Load (0.0ms)[0m  SELECT "marketplaces".* FROM "marketplaces"
+  Rendered marketplaces/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 109ms (Views: 94.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/customer_informations.css?body=1" for 127.0.0.1 at 2017-05-22 08:53:28 -0400
+
+
+Started GET "/assets/marketplaces.css?body=1" for 127.0.0.1 at 2017-05-22 08:53:28 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2017-05-22 08:53:28 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2017-05-22 08:53:28 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2017-05-22 08:53:28 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2017-05-22 08:53:28 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2017-05-22 08:53:28 -0400
+
+
+Started GET "/assets/customer_informations.js?body=1" for 127.0.0.1 at 2017-05-22 08:53:28 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2017-05-22 08:53:28 -0400
+
+
+Started GET "/assets/marketplaces.js?body=1" for 127.0.0.1 at 2017-05-22 08:53:28 -0400
+
+
+Started GET "/customer_informations" for 127.0.0.1 at 2017-05-22 08:53:32 -0400
+Processing by CustomerInformationsController#index as HTML
+  [1m[36mCustomerInformation Load (0.0ms)[0m  [1mSELECT "customer_informations".* FROM "customer_informations"[0m
+  Rendered customer_informations/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 106ms (Views: 94.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2017-05-22 08:53:32 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2017-05-22 08:53:32 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2017-05-22 08:53:32 -0400
+
+
+Started GET "/assets/marketplaces.css?body=1" for 127.0.0.1 at 2017-05-22 08:53:32 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2017-05-22 08:53:32 -0400
+
+
+Started GET "/assets/customer_informations.css?body=1" for 127.0.0.1 at 2017-05-22 08:53:32 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2017-05-22 08:53:32 -0400
+
+
+Started GET "/assets/customer_informations.js?body=1" for 127.0.0.1 at 2017-05-22 08:53:32 -0400
+
+
+Started GET "/assets/marketplaces.js?body=1" for 127.0.0.1 at 2017-05-22 08:53:32 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2017-05-22 08:53:32 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.0ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"

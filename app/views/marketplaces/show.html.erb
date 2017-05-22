@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Order:</strong>
+  <%= @marketplace.Order_id %>
+</p>
+
+<p>
+  <strong>Product name:</strong>
+  <%= @marketplace.Product_Name %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @marketplace.Price %>
+</p>
+
+<p>
+  <strong>Customer:</strong>
+  <%= @marketplace.Customer_id %>
+</p>
+
+<%= link_to 'Edit', edit_marketplace_path(@marketplace) %> |
+<%= link_to 'Back', marketplaces_path %>
